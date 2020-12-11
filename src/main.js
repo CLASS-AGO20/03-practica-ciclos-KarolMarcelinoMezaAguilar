@@ -15,8 +15,21 @@ export default class App {
         return factorial;
     }
 
-    // Función que
+    // Función que reciba un númer y entregue su equivalente en asteriscos (while)
 
+    convertirAString(numero){
+
+        let i = numero
+        let asteriscos = "*"
+
+        while(i>=0){
+            if(i<=numero){
+                asteriscos = asteriscos + "*";
+            }
+            i = i--;
+        }
+        return asteriscos;
+    }
 
     // Función que
 
@@ -33,3 +46,7 @@ let app = new App();
 console.log(app.factorial(5));
 console.log(app.factorial(3));
 console.log(app.factorial(1));
+
+// F2
+
+console.log(app.convertirAString(5));
