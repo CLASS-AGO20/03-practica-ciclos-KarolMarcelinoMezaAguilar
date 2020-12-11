@@ -54,7 +54,19 @@ export default class App {
 
     // Función que eleve un número a la N y regrese el resultado (cualquiera)
 
-    
+    elevar(numero, potencia){
+        let resultado = numero;
+        let i = potencia;
+        while(i <= 0){
+            if(i==0){
+                resultado = resultado * resultado
+            }
+
+            i = i--;
+
+        }
+    }
+    return resultado;
 }
 
 let app = new App();
@@ -74,3 +86,9 @@ console.log(app.convertirAString(5));
 console.log(app.obtenerDivisibles(6));
 console.log(app.obtenerDivisibles(4));
 console.log(app.obtenerDivisibles(1));
+
+// F4
+
+console.log(app.elevar(3, 4));
+console.log(app.elevar(5, 2));
+console.log(app.elevar(2, 3));
