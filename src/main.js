@@ -31,10 +31,28 @@ export default class App {
         return asteriscos;
     }
 
-    // Función que
+    // Función que diga entre cuantos números es divisible un número (do while)
+
+    obtenerDivisibles(numero){
+
+        let resultado = 0;
+        let i = numero;
+
+        do{
+            if(numero%i === 0){
+                resultado++;
+            }
+
+            i--;
+
+        }while(i<=0)
+
+        return resultado;
+
+    }
 
 
-    // Función que
+    // Función que eleve un número a la N y regrese el resultado (cualquiera)
 
     
 }
@@ -50,3 +68,9 @@ console.log(app.factorial(1));
 // F2
 
 console.log(app.convertirAString(5));
+
+// F3
+
+console.log(app.obtenerDivisibles(6));
+console.log(app.obtenerDivisibles(4));
+console.log(app.obtenerDivisibles(1));
