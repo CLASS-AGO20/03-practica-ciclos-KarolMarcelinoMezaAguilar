@@ -4,69 +4,53 @@ export default class App {
 
     factorial(numero){
 
-        let factorial = 1;
-
-        for(let i=2; i<=numero; i++){
-            if(i<=numero){
-                factorial = factorial * i;
-            }
-        }
-
-        return factorial;
+        let multiplicacion=1;
+    for(let i=1; i<=numero; i++){
+        multiplicacion=multiplicacion*i;
     }
+    return multiplicacion;
+}
 
     // Función que reciba un númer y entregue su equivalente en asteriscos (while)
 
     convertirAString(numero){
 
-        let i = numero
-        let asteriscos = "*"
-
-        while(i>=0){
-            if(i<=numero){
-                asteriscos = asteriscos + "*";
-            }
-            i = i--;
-        }
-        return asteriscos;
+        let asterisco="";
+    let i=1
+    while(i<=numero){
+        asterisco=`${asterisco}*`
+        i++
     }
+    return asterisco;
+}
 
     // Función que diga entre cuantos números es divisible un número (do while)
 
     obtenerDivisibles(numero){
 
-        let resultado = 0;
-        let i = numero;
-
+        let divisores=0;
+        let i=1;
         do{
-            if(numero%i === 0){
-                resultado++;
+            if(numero%i===0){
+                divisores++;
             }
-
-            i--;
-
-        }while(i<=0)
-
-        return resultado;
-
+            i++
+        } while (i<=numero);
+        return divisores;
     }
 
 
     // Función que eleve un número a la N y regrese el resultado (cualquiera)
 
     elevar(numero, potencia){
-        let resultado = numero;
-        let i = potencia;
-        while(i <= 0){
-            if(i==0){
-                resultado = resultado * resultado
-            }
 
-            i = i--;
-
-        }
+        let resultado=1;
+    for(let i=1; i<=potencia;i++){
+        resultado=resultado*numero;
     }
     return resultado;
+}
+
 }
 
 let app = new App();
